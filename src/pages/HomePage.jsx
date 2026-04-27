@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SearchForm from '../components/SearchForm.jsx';
 import SearchLoadingBar from '../components/SearchLoadingBar.jsx';
-import iconMonitor from '../assets/icons/Monitor.png';
+import iconMonitor from '../assets/icons/monitor.png';
 import iconGlobe from '../assets/icons/globe.png';
 import iconOffice from '../assets/icons/office.png';
 import womanIcon from '../assets/icons/woman.png';
