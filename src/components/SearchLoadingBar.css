@@ -1,0 +1,23 @@
+.hero-search-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  background: #cfcfcf;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.hero-search-progress--visible {
+  opacity: 1;
+}
+
+.hero-search-progress__bar {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.14s linear;
+}

@@ -1,0 +1,362 @@
+.booking-layout {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.booking-layout__sidebar {
+  display: grid;
+  gap: 30px;
+}
+
+.booking-layout__main {
+  min-width: 0;
+}
+
+.last-tickets {
+  padding: 0;
+}
+
+.last-tickets h3 {
+  margin: 0 0 28px;
+  color: #292929;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.last-tickets__list {
+  display: grid;
+  gap: 18px;
+}
+
+.last-ticket-card {
+  padding: 18px 18px 16px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.last-ticket-card__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.last-ticket-card__route {
+  min-width: 0;
+}
+
+.last-ticket-card__route--to {
+  text-align: right;
+}
+
+.last-ticket-card__city {
+  display: block;
+  margin: 0 0 4px;
+  color: #292929;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.last-ticket-card__station {
+  display: block;
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.last-ticket-card__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.last-ticket-card__icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 24px;
+  color: #cfcfcfcf;
+}
+
+.last-ticket-card__icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.last-ticket-card__price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.last-ticket-card__price-prefix {
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(-2px);
+}
+
+.last-ticket-card__price-value {
+  color: #ffa800;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.last-ticket-card__price-currency {
+  color: #928f94;
+  font-size: 45px;
+  line-height: 0.95;
+}
+.results-head__sort {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-head__sort-dropdown {
+  position: relative;
+}
+
+.results-head__sort-current {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.results-head__sort-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  min-width: 128px;
+  background: #f7f5f9;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid #e5e3e7;
+}
+
+.results-head__sort-option {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: #3e3c41;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.results-head__sort-option:hover {
+  background: rgba(255, 168, 0, 0.08);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 140px;
+}
+
+.pagination__button {
+  width: 84px;
+  height: 75px;
+  border: 1px solid #c4c4c4;
+  background: transparent;
+  color: #928f94;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.pagination__button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pagination__button.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.pagination__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: 12px;
+    margin-top: 70px;
+  }
+
+  .pagination__button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .booking-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+
+  .last-ticket-card__city {
+    font-size: 22px;
+  }
+
+  .last-ticket-card__price-value,
+  .last-ticket-card__price-currency {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-layout__sidebar {
+    order: 2;
+  }
+
+  .booking-layout__main {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .last-tickets h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .last-ticket-card {
+    padding: 16px 14px 14px;
+  }
+
+  .last-ticket-card__city {
+    font-size: 20px;
+  }
+
+  .last-ticket-card__station {
+    font-size: 14px;
+  }
+
+  .last-ticket-card__bottom {
+    gap: 12px;
+  }
+
+  .last-ticket-card__price-value,
+  .last-ticket-card__price-currency {
+    font-size: 28px;
+  }
+
+  .last-ticket-card__price-prefix {
+    font-size: 16px;
+  }
+}
+.results-head {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 44px;
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.results-head__found {
+  justify-self: start;
+  color: #928f94;
+  font-size: 18px;
+}
+
+.results-head__sort,
+.results-head__limit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.results-head__label {
+  color: #928f94;
+}
+
+.results-head__sort-button,
+.results-head__limit-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.results-head__sort-button:hover,
+.results-head__limit-button:hover {
+  color: var(--accent);
+}
+
+.results-head__sort-button.is-active,
+.results-head__limit-button.is-active {
+  color: #292929;
+}
+
+@media (max-width: 1180px) {
+  .results-head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .results-head__found,
+  .results-head__sort,
+  .results-head__limit {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-head {
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .results-head__found,
+  .results-head__sort-button,
+  .results-head__limit-button {
+    font-size: 16px;
+  }
+
+  .results-head__sort,
+  .results-head__limit {
+    gap: 10px;
+  }
+}

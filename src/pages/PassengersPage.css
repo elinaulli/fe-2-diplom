@@ -1,0 +1,81 @@
+.passengers-page {
+  padding: 48px 0 80px;
+}
+
+.passengers-page__title {
+  margin: 0 0 32px;
+  color: #292929;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.passengers-page__card {
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 4px rgba(62, 60, 65, 0.08);
+}
+
+.passengers-page__subtitle {
+  margin: 0 0 20px;
+  color: #292929;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.passengers-page__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e3e7;
+}
+
+.passengers-page__row:last-child {
+  border-bottom: none;
+}
+
+.passengers-page__form {
+  display: grid;
+  gap: 16px;
+}
+
+.passengers-page__input {
+  width: 100%;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.passengers-page__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.passengers-page__back-button,
+.passengers-page__next-button {
+  min-width: 220px;
+  height: 56px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.passengers-page__back-button {
+  background: #928f94;
+  color: #ffffff;
+}
+
+.passengers-page__next-button {
+  background: #ffa800;
+  color: #292929;
+}

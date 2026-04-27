@@ -1,0 +1,690 @@
+/* .route-card {
+  display: grid;
+  grid-template-columns: 197px minmax(0, 1fr) 239px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(62, 60, 65, 0.1);
+}
+
+.route-card__train-block {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 58px 28px 42px;
+  background: #e4e0ec;
+  color: #3e3c41;
+}
+
+.route-card__train-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0eff3;
+  background: transparent;
+}
+
+.route-card__train-svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.route-card__train-block strong {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.route-card__train-block span {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.route-card__main {
+  display: grid;
+  gap: 28px;
+  padding: 42px 34px 34px;
+}
+
+.route-card__line {
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.route-card__line strong {
+  display: block;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.route-card__line span {
+  display: block;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.route-card__line small {
+  display: block;
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.route-card__center {
+  text-align: center;
+}
+
+.route-card__center span {
+  display: block;
+  color: #c4c4c4;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.route-card__arrow {
+  position: relative;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.route-card__arrow::after {
+  content: '➜';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.route-card__arrow.is-reversed::after {
+  content: '➜';
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.route-card__aside {
+  display: grid;
+  align-content: center;
+  gap: 22px;
+  padding: 28px 20px 24px;
+  border-left: 1px solid #e5e3e7;
+}
+
+.route-card__prices {
+  display: grid;
+  gap: 18px;
+}
+
+.route-card__price-item {
+  position: relative;
+}
+
+.route-card__price-row {
+  display: grid;
+  grid-template-columns: minmax(72px, 1fr) 28px 20px auto 16px;
+  align-items: baseline;
+  column-gap: 8px;
+}
+
+.route-card__price-type {
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.route-card__seats-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: right;
+  cursor: pointer;
+}
+
+.route-card__seats-button:disabled {
+  cursor: default;
+}
+
+.route-card__from-label {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1;
+  text-align: right;
+}
+
+.route-card__price-value {
+  color: #2d2b2f;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.route-card__price-value-currency {
+  color: #928f94;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+}
+
+.route-card__services {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  color: #c4c4c4;
+}
+
+.route-card__service-icon,
+.route-card-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  color: #c4c4c4;
+}
+
+.route-card__button,
+.accent-button.accent-button--small {
+  min-height: 39px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.route-card__button:hover,
+.accent-button.accent-button--small:hover {
+  background: var(--accent-dark);
+}
+
+/* popup */
+/* .route-card__popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 10;
+  min-width: 220px;
+  padding: 14px 16px;
+  background: #f4f2f5;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.route-card__popup::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 52px;
+  width: 14px;
+  height: 14px;
+  background: #f4f2f5;
+  transform: rotate(45deg);
+}
+
+.route-card__popup-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-card__popup-row + .route-card__popup-row {
+  margin-top: 10px;
+}
+
+.route-card__popup-row span:first-child {
+  color: #292929;
+  font-size: 18px;
+}
+
+.route-card__popup-row strong {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.route-card__popup-price {
+  color: #292929;
+  font-size: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.route-card__popup-empty {
+  color: #928f94;
+  font-size: 14px;
+}
+
+@media (max-width: 1360px) {
+  .route-card {
+    grid-template-columns: 180px minmax(0, 1fr) 220px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .route-card {
+    grid-template-columns: 1fr;
+  }
+
+  .route-card__aside {
+    border-left: none;
+    border-top: 1px solid #e5e3e7;
+  }
+}
+
+@media (max-width: 768px) {
+  .route-card__train-block,
+  .route-card__main,
+  .route-card__aside {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .route-card__line {
+    grid-template-columns: 1fr;
+  }
+
+  .route-card__center {
+    padding: 8px 0;
+  }
+} */ .route-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) 270px;
+  width: 100%;
+  min-width: 0; 
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 2px rgba(62, 60, 65, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.route-card:hover,
+.route-card:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 2px 10px rgba(255, 168, 0, 0.18);
+}
+.route-card__train-block {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 58px 28px 42px;
+  background: #e4e0ec;
+  color: #3e3c41;
+}
+
+.route-card__train-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0eff3;
+  background: transparent;
+}
+
+.route-card__train-svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.route-card__train-block strong {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.route-card__train-block span {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+/* .route-card__main {
+  display: grid;
+  gap: 28px;
+  padding: 42px 29px 29px;
+  
+} */
+ .route-card__main {
+  min-width: 0;
+  display: grid;
+  gap: 28px;
+  padding: 42px 29px 29px;
+}
+
+.route-card__line {
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.route-card__line strong {
+  display: block;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.route-card__line span {
+  display: block;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.route-card__line small {
+  display: block;
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.route-card__center {
+  text-align: center;
+}
+
+.route-card__center span {
+  display: block;
+  color: #c4c4c4;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* .route-card__arrow {
+  position: relative;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.route-card__arrow::after {
+  content: '➜';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+} */
+/* 
+.route-card__arrow.is-reversed::after {
+  transform: translate(-50%, -50%) scaleX(-1);
+} */
+/* замена стрелки */
+.route-card__arrow-icon {
+  display: block;
+  width: 30px;
+  height: 20px;
+  margin: 8px auto 0;
+  color: var(--accent);
+}
+
+.route-card__arrow-icon.is-reversed {
+  transform: scaleX(-1);
+}
+.route-card__aside {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+  gap: 22px;
+  padding: 28px 20px 20px;
+  border-left: 1px solid #e5e3e7;
+}
+
+.route-card__prices {
+  display: grid;
+  gap: 18px;
+}
+
+.route-card__price-item {
+  position: relative;
+}
+.route-card__price-row {
+  display: grid;
+  grid-template-columns: 82px 34px 24px auto 18px;
+  align-items: baseline;
+  column-gap: 8px;
+}
+/* 
+.route-card__price-row {
+  display: grid;
+  grid-template-columns: 50px 34px 24px 1fr 18px;
+  align-items: baseline;
+  column-gap: 8px;
+} */
+
+.route-card__price-type {
+  white-space: nowrap;
+  color: #928f94;
+  font-size: 14px;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.route-card__seats-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: right;
+  cursor: pointer;
+}
+
+.route-card__seats-button:disabled {
+  cursor: default;
+}
+
+.route-card__from-label {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1;
+  text-align: right;
+}
+
+.route-card__price-value {
+  color: #2d2b2f;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.route-card__price-value-currency {
+  color: #928f94;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+  justify-self: start;
+}
+
+.route-card__services {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  color: #c4c4c4;
+}
+
+.route-card__service-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  color: #c4c4c4;
+}
+
+.route-card__button,
+.accent-button.accent-button--small {
+  min-height: 39px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.route-card__button:hover,
+.accent-button.accent-button--small:hover {
+  background: var(--accent-dark);
+}
+
+.route-card__popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 10;
+  min-width: 220px;
+  padding: 14px 16px;
+  background: #f4f2f5;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.route-card__popup::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 52px;
+  width: 14px;
+  height: 14px;
+  background: #f4f2f5;
+  transform: rotate(45deg);
+}
+
+.route-card__popup-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-card__popup-row + .route-card__popup-row {
+  margin-top: 10px;
+}
+
+.route-card__popup-row span:first-child {
+  color: #292929;
+  font-size: 18px;
+}
+
+.route-card__popup-row strong {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.route-card__popup-price {
+  color: #292929;
+  font-size: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.route-card__popup-empty {
+  color: #928f94;
+  font-size: 14px;
+}
+
+/* @media (max-width: 1360px) {
+  .route-card {
+    grid-template-columns: 180px minmax(0, 1fr) 240px;
+  }
+} */
+ @media (max-width: 1360px) {
+  .route-card {
+    grid-template-columns: 160px minmax(0, 1fr) 240px;
+  }
+
+  .route-card__price-row {
+    grid-template-columns: 76px 30px 22px auto 18px;
+  }
+
+  .route-card__price-value,
+  .route-card__price-value-currency {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .route-card {
+    grid-template-columns: 1fr;
+  }
+
+  .route-card__aside {
+    border-left: none;
+    border-top: 1px solid #e5e3e7;
+  }
+}
+
+@media (max-width: 768px) {
+  .route-card__train-block,
+  .route-card__main,
+  .route-card__aside {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .route-card__line {
+    grid-template-columns: 1fr;
+  }
+
+  .route-card__center {
+    padding: 8px 0;
+  }
+
+ .route-card__price-row {
+  grid-template-columns: 82px 28px 20px minmax(0, 1fr) 16px;
+}
+
+  .route-card__line strong,
+  .route-card__price-value,
+  .route-card__price-value-currency {
+    font-size: 22px;
+  }
+
+  .route-card__line span,
+  .route-card__price-type {
+    font-size: 16px;
+  }
+
+  .route-card__line small {
+    font-size: 14px;
+  }
+}

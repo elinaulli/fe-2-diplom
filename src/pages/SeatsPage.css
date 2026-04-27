@@ -1,0 +1,493 @@
+.seats-page {
+  padding: 48px 0 80px;
+}
+
+.seats-page__title {
+  margin: 0 0 32px;
+  color: #292929;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.seats-direction-card,
+.seats-block {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 2px 4px rgba(62, 60, 65, 0.08);
+}
+
+.seats-direction-card + .seats-block,
+.seats-block + .seats-direction-card,
+.seats-block + .seats-block {
+  margin-top: 28px;
+}
+.seats-block__placeholder {
+  padding: 24px;
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.seats-direction-card__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 24px 20px;
+  border-bottom: 1px solid #e5e3e7;
+}
+/* Время в пути */
+.seats-direction-card__duration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.seats-direction-card__clock-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
+  flex: 0 0 30px;
+}
+/*  */
+.seats-direction-card__back {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+}
+.seats-direction-card__arrow-icon {
+  width: 30px;
+  height: 20px;
+  color: var(--accent);
+  display: block;
+  margin: 0 auto 8px;
+}
+.seats-direction-card__change {
+  min-height: 56px;
+  padding: 0 28px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #292929;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.seats-direction-card__info {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.seats-direction-card__train {
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+  background: #f7f6f9;
+  border-right: 1px solid #e5e3e7;
+}
+
+.seats-direction-card__train strong {
+  color: #3e3c41;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.seats-direction-card__train span {
+  color: #928f94;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.seats-direction-card__time {
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 28px;
+}
+
+.seats-direction-card__time strong {
+  display: block;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.seats-direction-card__time span {
+  display: block;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.seats-direction-card__time small {
+  display: block;
+  color: #928f94;
+  font-size: 16px;
+}
+/* Количество билетов */
+.ticket-counts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #e5e3e7;
+}
+
+.ticket-counts__card {
+  min-height: 190px;
+  padding: 22px 28px 26px;
+  border-right: 1px solid #e5e3e7;
+  background: #ffffff;
+}
+
+.ticket-counts__card:last-child {
+  border-right: none;
+}
+
+.ticket-counts__card--accent {
+  border: 1px solid #ffa800;
+  margin: -1px 0;
+  background: #fffdf8;
+}
+
+.ticket-counts__control {
+ 
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+/* .ticket-counts__button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #292929;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ticket-counts__button:hover {
+  border-color: #ffa800;
+} */
+
+.ticket-counts__value {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  color: #292929;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.ticket-counts__hint {
+  margin: 0;
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+@media (max-width: 1180px) {
+  .ticket-counts {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-counts__card {
+    border-right: none;
+    border-bottom: 1px solid #e5e3e7;
+  }
+
+  .ticket-counts__card:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Вагоны */
+.coach-types {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 20px 28px 28px;
+  border-top: 1px dashed #e5e3e7;
+}
+
+.coach-types__item {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 8px 8px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.coach-types__icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.coach-types__label {
+  color: #928f94;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+.coach-types__item.is-active .coach-types__label {
+  color: #928f94;
+}
+
+
+
+@media (max-width: 1180px) {
+  .coach-types {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coach-types__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coach-types {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 18px 18px 22px;
+  }
+
+  .coach-types__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .coach-types__label {
+    font-size: 20px;
+  }
+}
+/* Вагоны */
+.coach-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 28px 0;
+}
+
+.coach-numbers__item {
+  min-width: 56px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: none;
+  background: transparent;
+  color: #928f94;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.coach-numbers__item.is-active {
+  color: #ffa800;
+}
+
+.coach-summary {
+  display: grid;
+  gap: 14px;
+  padding: 24px 28px 28px;
+}
+
+.coach-summary__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e3e7;
+}
+
+.coach-summary__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.coach-summary__label {
+  color: #928f94;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.coach-summary__value {
+  color: #292929;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .coach-numbers {
+    padding: 18px 18px 0;
+  }
+
+  .coach-summary {
+    padding: 20px 18px 22px;
+  }
+
+  .coach-numbers__item {
+    font-size: 20px;
+  }
+
+  .coach-summary__label,
+  .coach-summary__value {
+    font-size: 16px;
+  }
+}
+/* Места */
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 28px 0;
+}
+
+.seat-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #928f94;
+  font-size: 16px;
+}
+
+.seat-legend__mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.seat-legend__mark--available {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+}
+
+.seat-legend__mark--selected {
+  background: #ffa800;
+}
+
+.seat-legend__mark--unavailable {
+  background: #c4c4c4;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(54px, 54px));
+  gap: 12px;
+  padding: 24px 28px 0;
+}
+
+.seat-grid__item {
+  width: 54px;
+  height: 44px;
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #292929;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.seat-grid__item.is-available:hover {
+  border-color: #ffa800;
+}
+
+.seat-grid__item.is-selected {
+  border-color: #ffa800;
+  background: #ffa800;
+  color: #ffffff;
+}
+
+.seat-grid__item.is-unavailable {
+  background: #c4c4c4;
+  border-color: #c4c4c4;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.seat-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 28px 28px;
+}
+
+.seat-summary__label {
+  color: #928f94;
+  font-size: 18px;
+}
+
+.seat-summary__value {
+  color: #292929;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .seat-legend {
+    padding: 18px 18px 0;
+  }
+
+  .seat-grid {
+    padding: 20px 18px 0;
+    grid-template-columns: repeat(auto-fill, minmax(48px, 48px));
+    gap: 10px;
+  }
+
+  .seat-grid__item {
+    width: 48px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .seat-summary {
+    padding: 20px 18px 22px;
+  }
+}
+/* Кнопка Далее */
+.seats-page__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.seats-page__next-button {
+  min-width: 222px;
+  height: 60px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 5px;
+  background: #ffa800;
+  color: #292929;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.seats-page__next-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

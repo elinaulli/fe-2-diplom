@@ -1,0 +1,20 @@
+LICENSE INFORMATION FOR ICONS
+
+All icons used in this project are sourced from Flaticon (https://www.flaticon.com).
+
+ATTRIBUTIONS:
+
+- Globe icon: Prosymbols via Flaticon
+- Company icon: Iconriver via Flaticon
+- Monitor icon: DinosoftLabs via Flaticon
+- YouTube icon: Freepik via Flaticon
+- LinkedIn icon: Smashicons via Flaticon
+- Google Plus icon: Freepik via Flaticon
+- Facebook icon: Freepik via Flaticon
+- Logo icon: Freepik via Flaticon
+- Twitter icon: Pixel perfect via Flaticon
+- Women icon: Iconsmeet via Flaticon
+- Male avatar icon: Creative Stall Premium via Flaticon
+- Passengers icon: Ylivdesign via Flaticon
+
+Links to licenses: https://www.flaticon.com/legal
