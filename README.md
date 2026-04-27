@@ -1,16 +1,104 @@
-# React + Vite
+# FE-2 Diplom — Сервис покупки железнодорожных билетов
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебный дипломный проект на **React + Vite**.  
+Приложение реализует многошаговый сценарий оформления железнодорожных билетов: от поиска маршрута до выбора мест и перехода к данным пассажиров.
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Проект представляет собой клиентское SPA-приложение для покупки билетов на поезд.
 
-## React Compiler
+Пользователь может:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- выбрать направление и даты поездки
+- получить список доступных маршрутов
+- отсортировать результаты
+- открыть страницу выбора мест
+- выбрать тип вагона, вагон и места
+- перейти к следующему шагу оформления
 
-## Expanding the ESLint configuration
+## Основной функционал
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Поиск маршрутов
+На главной странице пользователь выбирает:
+- город отправления
+- город прибытия
+- дату поездки
+- дату возвращения
+
+После отправки формы выполняется переход на страницу результатов.
+
+### 2. Результаты поиска
+На странице результатов:
+- отображается список поездов
+- доступны сортировка и фильтрация
+- можно выбрать нужный маршрут
+- доступен переход к выбору мест
+
+### 3. Выбор мест
+На странице выбора мест отображаются:
+- информация о выбранном направлении
+- типы вагонов
+- список вагонов выбранного типа
+- список доступных мест
+- выбранные места сохраняются в общее состояние приложения
+
+### 4. Данные пассажиров
+После выбора мест пользователь переходит к следующему шагу оформления.
+
+## Технологии
+
+Проект выполнен с использованием:
+
+- **React**
+- **React Router**
+- **Vite**
+- **Context API**
+- **CSS**
+- **ESLint**
+
+## Структура проекта
+
+Основные части приложения:
+
+- `src/pages` — страницы приложения
+- `src/components` — переиспользуемые компоненты
+- `src/context` — контекст бронирования
+- `src/api` — работа с API
+- `src/data` — mock-данные
+- `src/assets` — изображения и иконки
+- `src/utils` — вспомогательные функции
+
+## Работа с данными
+
+В проекте предусмотрена интеграция с публичным API диплома:
+
+- поиск маршрутов
+- получение списка мест
+- отправка заказа
+
+Однако публичный API может работать нестабильно.  
+Поэтому в приложении реализован **fallback на mock-данные**.
+
+Это значит:
+
+- если API отвечает корректно — используются данные сервера
+- если API недоступен или возвращает ошибку — подключаются mock-данные
+
+Такой подход позволяет сохранить рабочий пользовательский сценарий и протестировать приложение целиком.
+
+## Управление состоянием
+
+Для хранения данных бронирования используется `BookingContext`.
+
+В контексте хранятся:
+
+- параметры поиска
+- выбранный маршрут
+- данные по вагонам и местам
+- выбранные места
+- пассажиры
+- данные покупателя
+- итоговый заказ
+
+
+
